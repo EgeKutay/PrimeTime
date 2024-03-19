@@ -4,6 +4,16 @@ import 'package:prime_time_app/models/task.dart';
 class TaskItem extends StatelessWidget {
   const TaskItem(this.task, {super.key});
   final Task task;
+  void _removeTaskPopup() {
+    AlertDialog(
+      actions: [
+        TextButton(
+          onPressed: () {},
+          child: const Text('Accept'),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +23,17 @@ class TaskItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              task.title,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            Row(
+              children: [
+                Text(
+                  task.title,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 16),
+                )
+              ],
+            ),
+            Row(
+              children: [Text(task.duration.toString())],
             )
           ],
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prime_time_app/widgets/tasks.dart';
+import 'package:prime_time_app/screens/TasksScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Tasks(),
+      home: const TasksScreen(),
     );
   }
 }
